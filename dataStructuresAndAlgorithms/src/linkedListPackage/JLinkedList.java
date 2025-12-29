@@ -70,6 +70,13 @@ public class JLinkedList<T> {
 		}
 	}
 	
+	public T getFront() {
+	    if (head.next == null) {
+	        return null; // or throw exception
+	    }
+	    return head.next.data;
+	}
+	
 	// printing the list
 	
 	public void printList() {
@@ -167,5 +174,10 @@ public class JLinkedList<T> {
 	    Node currNode = this.head.next;
 	    System.out.print("Reversed List : ");
 	    remove(currNode);
+	}
+
+	public boolean isEmpty() {
+		
+		return this.head.next == null;
 	}
 }
